@@ -11,7 +11,7 @@ describe('Label', () => {
     render(<Label text="Disabled" disabled />);
     expect(screen.getByText('Disabled')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

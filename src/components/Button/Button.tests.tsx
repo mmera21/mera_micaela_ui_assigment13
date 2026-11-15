@@ -11,7 +11,7 @@ describe('Button', () => {
     render(<Button label="Disabled" disabled />);
     expect(screen.getByText('Disabled')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

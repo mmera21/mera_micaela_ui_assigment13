@@ -7,7 +7,7 @@ const sampleSrc =
     '<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200">' +
       '<rect width="320" height="200" fill="#4f8ef7"/>' +
       '<circle cx="160" cy="100" r="50" fill="#ffffff" opacity="0.8"/>' +
-      '</svg>'
+      '</svg>',
   );
 
 const meta: Meta<typeof Img> = {

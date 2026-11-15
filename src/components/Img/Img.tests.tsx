@@ -13,7 +13,7 @@ describe('Img', () => {
     render(<Img src={src} alt="Disabled" disabled />);
     expect(screen.getByAltText('Disabled')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

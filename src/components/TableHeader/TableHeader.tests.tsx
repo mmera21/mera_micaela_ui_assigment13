@@ -6,7 +6,7 @@ describe('TableHeader', () => {
     render(
       <table>
         <TableHeader columns={['Name', 'Age']} />
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-header')).toBeVisible();
   });
@@ -15,11 +15,11 @@ describe('TableHeader', () => {
     render(
       <table>
         <TableHeader columns={['Name', 'Age']} disabled />
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-header')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

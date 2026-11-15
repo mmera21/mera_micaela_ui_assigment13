@@ -10,7 +10,7 @@ describe('TableCell', () => {
             <TableCell>Data</TableCell>
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-cell')).toBeVisible();
   });
@@ -23,11 +23,11 @@ describe('TableCell', () => {
             <TableCell disabled>Data</TableCell>
           </tr>
         </tbody>
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-cell')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

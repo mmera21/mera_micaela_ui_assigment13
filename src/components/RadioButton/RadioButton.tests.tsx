@@ -11,7 +11,7 @@ describe('RadioButton', () => {
     render(<RadioButton label="Disabled" disabled />);
     expect(screen.getByText('Disabled')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

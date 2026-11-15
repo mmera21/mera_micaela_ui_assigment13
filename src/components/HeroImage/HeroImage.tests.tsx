@@ -13,7 +13,7 @@ describe('HeroImage', () => {
     render(<HeroImage src={src} title="Welcome" disabled />);
     expect(screen.getByTestId('hero-image')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

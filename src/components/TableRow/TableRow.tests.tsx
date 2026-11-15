@@ -10,7 +10,7 @@ describe('TableRow', () => {
             <td>Data</td>
           </TableRow>
         </tbody>
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-row')).toBeVisible();
   });
@@ -23,11 +23,11 @@ describe('TableRow', () => {
             <td>Data</td>
           </TableRow>
         </tbody>
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-row')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

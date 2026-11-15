@@ -6,7 +6,7 @@ describe('TableFooter', () => {
     render(
       <table>
         <TableFooter text="Total" />
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-footer')).toBeVisible();
   });
@@ -15,11 +15,11 @@ describe('TableFooter', () => {
     render(
       <table>
         <TableFooter text="Total" disabled />
-      </table>
+      </table>,
     );
     expect(screen.getByTestId('table-footer')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

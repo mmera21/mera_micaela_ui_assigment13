@@ -15,10 +15,7 @@ const meta: Meta<typeof Table> = {
   },
   render: (args) => (
     <Table {...args}>
-      <TableHeader
-        columns={['Name', 'Age', 'City']}
-        disabled={args.disabled}
-      />
+      <TableHeader columns={['Name', 'Age', 'City']} disabled={args.disabled} />
       <tbody>
         <TableRow disabled={args.disabled}>
           <TableCell disabled={args.disabled}>Ana</TableCell>
@@ -31,7 +28,11 @@ const meta: Meta<typeof Table> = {
           <TableCell disabled={args.disabled}>Toronto</TableCell>
         </TableRow>
       </tbody>
-      <TableFooter text="Total: 2 people" colSpan={3} disabled={args.disabled} />
+      <TableFooter
+        text="Total: 2 people"
+        colSpan={3}
+        disabled={args.disabled}
+      />
     </Table>
   ),
 };

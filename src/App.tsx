@@ -21,7 +21,7 @@ const sampleImg =
       '<stop offset="0" stop-color="#4f8ef7"/><stop offset="1" stop-color="#7b3fe4"/>' +
       '</linearGradient></defs>' +
       '<rect width="1200" height="400" fill="url(#g)"/>' +
-      '</svg>'
+      '</svg>',
   );
 
 const options = [

@@ -11,7 +11,7 @@ describe('Card', () => {
     render(<Card title="Hello" description="Description" disabled />);
     expect(screen.getByTestId('card')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

@@ -12,7 +12,7 @@ const Hero = styled.div<{ $bg: string; $src: string; $disabled: boolean }>`
   width: 100%;
   min-height: 300px;
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  background-image: url("${(p) => p.$src}");
+  background-image: url('${(p) => p.$src}');
   background-size: cover;
   background-position: center;
   color: #ffffff;

@@ -16,7 +16,7 @@ describe('Dropdown', () => {
     render(<Dropdown options={options} label="Menu" disabled />);
     expect(screen.getByLabelText('Menu')).toHaveStyleRule(
       'background-color',
-      '#cccccc'
+      '#cccccc',
     );
   });
 });

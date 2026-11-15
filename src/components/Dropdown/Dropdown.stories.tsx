@@ -24,5 +24,10 @@ export const Default: Story = {
   args: { options, label: 'Select', backgroundColor: '#ffffff' },
 };
 export const Disabled: Story = {
-  args: { options, label: 'Select', backgroundColor: '#ffffff', disabled: true },
+  args: {
+    options,
+    label: 'Select',
+    backgroundColor: '#ffffff',
+    disabled: true,
+  },
 };
