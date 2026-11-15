@@ -19,12 +19,16 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "test:ci": "react-scripts test --watchAll=false --passWithNoTests",
+  "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\" --max-warnings=0",
+  "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,json}\"",
+  "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,css,json}\"",
+  "eject": "react-scripts eject",
+  "storybook": "storybook dev -p 6006",
+  "build-storybook": "storybook build"
   },
   "jest": {
     "testMatch": [
