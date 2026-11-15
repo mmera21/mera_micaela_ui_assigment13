@@ -31,12 +31,13 @@
       "<rootDir>/src/**/*.tests.{ts,tsx}"
     ]
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+"eslintConfig": {
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "prettier"
+  ]
+},
   "browserslist": {
     "production": [
       ">0.2%",
