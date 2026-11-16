@@ -15,12 +15,12 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
-  args: { text: 'This is an example text.', backgroundColor: '#f5f5f5' },
+  args: { text: 'This is an example text.', backgroundColor: '#fff0f5' },
 };
 export const Disabled: Story = {
   args: {
     text: 'This text is disabled.',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#fff0f5',
     disabled: true,
   },
 };

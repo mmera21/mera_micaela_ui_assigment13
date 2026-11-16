@@ -4,7 +4,7 @@ import { TableFooterProps } from './TableFooter.types';
 
 const StyledFoot = styled.tfoot<{ $bg: string; $disabled: boolean }>`
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'default')};
   font-weight: bold;
 
@@ -22,7 +22,7 @@ const StyledFoot = styled.tfoot<{ $bg: string; $disabled: boolean }>`
 const TableFooter: React.FC<TableFooterProps> = ({
   text,
   colSpan = 1,
-  backgroundColor = '#e6f0ff',
+  backgroundColor = '#fde4ec',
   disabled = false,
 }) => (
   <StyledFoot

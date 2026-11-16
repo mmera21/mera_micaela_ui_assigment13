@@ -4,10 +4,10 @@ import { DropdownProps } from './Dropdown.types';
 
 const StyledSelect = styled.select<{ $bg: string }>`
   background-color: ${(p) => (p.disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.disabled ? 'not-allowed' : 'pointer')};
   padding: 0.6rem 1rem;
-  border: 1px solid #999999;
+  border: 1px solid #f4a6c0;
   border-radius: 6px;
   font-size: 1rem;
   width: 100%;

@@ -4,7 +4,7 @@ import { TableHeaderProps } from './TableHeader.types';
 
 const StyledHead = styled.thead<{ $bg: string; $disabled: boolean }>`
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#ffffff')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'default')};
 
   th {
@@ -21,7 +21,7 @@ const StyledHead = styled.thead<{ $bg: string; $disabled: boolean }>`
 
 const TableHeader: React.FC<TableHeaderProps> = ({
   columns,
-  backgroundColor = '#0066cc',
+  backgroundColor = '#f4a6c0',
   disabled = false,
 }) => (
   <StyledHead

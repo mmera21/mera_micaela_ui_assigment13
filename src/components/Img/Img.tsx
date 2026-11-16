@@ -21,7 +21,7 @@ const StyledImg = styled.img<{ $bg: string; $disabled: boolean }>`
 const Img: React.FC<ImgProps> = ({
   src,
   alt,
-  backgroundColor = '#e6f0ff',
+  backgroundColor = '#fde4ec',
   disabled = false,
 }) => (
   <StyledImg src={src} alt={alt} $bg={backgroundColor} $disabled={disabled} />

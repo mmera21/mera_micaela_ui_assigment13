@@ -7,7 +7,7 @@ const Wrapper = styled.label<{ $bg: string; $disabled: boolean }>`
   align-items: center;
   gap: 0.5rem;
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'pointer')};
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -28,7 +28,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
   label,
   name = 'radio',
   value = label,
-  backgroundColor = '#e6f0ff',
+  backgroundColor = '#fde4ec',
   disabled = false,
   checked,
   onChange,

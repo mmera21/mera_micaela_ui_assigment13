@@ -1,4 +1,7 @@
 node_modules
 build
 .git
+.github
+coverage
 storybook-static
+screenshots

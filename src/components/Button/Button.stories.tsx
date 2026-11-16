@@ -15,8 +15,8 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: { label: 'Click me', backgroundColor: '#0066cc' },
+  args: { label: 'Click me', backgroundColor: '#f4a6c0' },
 };
 export const Disabled: Story = {
-  args: { label: 'Disabled', disabled: true, backgroundColor: '#0066cc' },
+  args: { label: 'Disabled', disabled: true, backgroundColor: '#f4a6c0' },
 };

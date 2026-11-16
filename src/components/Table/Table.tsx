@@ -11,7 +11,7 @@ const StyledTable = styled.table<{ $bg: string; $disabled: boolean }>`
   width: 100%;
   border-collapse: collapse;
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'default')};
   font-size: 1rem;
 

@@ -23,12 +23,12 @@ export default meta;
 type Story = StoryObj<typeof TableHeader>;
 
 export const Default: Story = {
-  args: { columns: ['Name', 'Age', 'City'], backgroundColor: '#0066cc' },
+  args: { columns: ['Name', 'Age', 'City'], backgroundColor: '#f4a6c0' },
 };
 export const Disabled: Story = {
   args: {
     columns: ['Name', 'Age', 'City'],
-    backgroundColor: '#0066cc',
+    backgroundColor: '#f4a6c0',
     disabled: true,
   },
 };

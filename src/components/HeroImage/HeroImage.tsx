@@ -52,7 +52,7 @@ const HeroImage: React.FC<HeroImageProps> = ({
   src,
   title,
   subtitle,
-  backgroundColor = '#4f8ef7',
+  backgroundColor = '#f8c8dc',
   disabled = false,
 }) => (
   <Hero

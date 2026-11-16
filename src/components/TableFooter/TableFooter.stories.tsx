@@ -23,12 +23,12 @@ export default meta;
 type Story = StoryObj<typeof TableFooter>;
 
 export const Default: Story = {
-  args: { text: 'Total: 2 people', backgroundColor: '#e6f0ff' },
+  args: { text: 'Total: 2 people', backgroundColor: '#fde4ec' },
 };
 export const Disabled: Story = {
   args: {
     text: 'Total: 2 people',
-    backgroundColor: '#e6f0ff',
+    backgroundColor: '#fde4ec',
     disabled: true,
   },
 };

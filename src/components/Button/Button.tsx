@@ -4,7 +4,7 @@ import { ButtonProps } from './Button.types';
 
 const StyledButton = styled.button<{ $bg: string }>`
   background-color: ${(p) => (p.disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.disabled ? '#666666' : '#ffffff')};
+  color: ${(p) => (p.disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.disabled ? 'not-allowed' : 'pointer')};
   padding: 0.75rem 1.5rem;
   border: none;
@@ -20,7 +20,7 @@ const StyledButton = styled.button<{ $bg: string }>`
 
 const Button: React.FC<ButtonProps> = ({
   label,
-  backgroundColor = '#0066cc',
+  backgroundColor = '#f4a6c0',
   disabled = false,
   onClick,
 }) => (

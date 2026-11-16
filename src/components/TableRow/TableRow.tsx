@@ -4,9 +4,9 @@ import { TableRowProps } from './TableRow.types';
 
 const StyledRow = styled.tr<{ $bg: string; $disabled: boolean }>`
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'pointer')};
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #f9d3e0;
 `;
 
 const TableRow: React.FC<TableRowProps> = ({

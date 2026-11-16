@@ -4,7 +4,7 @@ import { CardProps } from './Card.types';
 
 const StyledCard = styled.div<{ $bg: string; $disabled: boolean }>`
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'pointer')};
   padding: 1.25rem;
   border-radius: 8px;

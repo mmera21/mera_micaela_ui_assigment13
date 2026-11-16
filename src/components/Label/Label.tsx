@@ -5,7 +5,7 @@ import { LabelProps } from './Label.types';
 const StyledLabel = styled.label<{ $bg: string; $disabled: boolean }>`
   display: inline-block;
   background-color: ${(p) => (p.$disabled ? '#cccccc' : p.$bg)};
-  color: ${(p) => (p.$disabled ? '#666666' : '#1a1a1a')};
+  color: ${(p) => (p.$disabled ? '#666666' : '#5c2a3e')};
   cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'pointer')};
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -20,7 +20,7 @@ const StyledLabel = styled.label<{ $bg: string; $disabled: boolean }>`
 
 const Label: React.FC<LabelProps> = ({
   text,
-  backgroundColor = '#e6f0ff',
+  backgroundColor = '#fde4ec',
   disabled = false,
   htmlFor,
 }) => (

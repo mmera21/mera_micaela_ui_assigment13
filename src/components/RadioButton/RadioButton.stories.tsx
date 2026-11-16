@@ -15,8 +15,8 @@ export default meta;
 type Story = StoryObj<typeof RadioButton>;
 
 export const Default: Story = {
-  args: { label: 'Option A', backgroundColor: '#e6f0ff' },
+  args: { label: 'Option A', backgroundColor: '#fde4ec' },
 };
 export const Disabled: Story = {
-  args: { label: 'Option A', backgroundColor: '#e6f0ff', disabled: true },
+  args: { label: 'Option A', backgroundColor: '#fde4ec', disabled: true },
 };
