@@ -1,111 +1,56 @@
-# Assignment 12: Web Component Library
+# Assignment 13: UI Component Library – Build Checks
 
-A UI component library built with **React**, **TypeScript**, **styled-components** and **Storybook**, served as a production build through **Docker** on `localhost:8083`.
+**Author:** Micaela Mera
+**Repo:** https://github.com/mmera21/mera_micaela_ui_assigment13
 
-- **GitHub repo:** https://github.com/mmera21/mera_micaela_ui_garden
-- **Docker image:** `mera_micaela_ui_garden`
-- **Docker container:** `mera_micaela_coding_assignment12`
-- **Docker working dir:** `/mera_micaela_ui_garden`
+My UI component library from Assignment 12 (React + TypeScript + styled-components + Storybook) with code quality checks added to the build process.
 
-## Components
-
-Button, Label, Text, Table, TableHeader, TableRow, TableCell, TableFooter, Dropdown, RadioButton, Img, HeroImage, Card.
-
-Each component folder (`src/components/<Name>/`) contains:
-
-```
-<Name>.tsx
-<Name>.stories.tsx
-<Name>.types.tsx
-<Name>.tests.tsx
-index.ts
-```
-
-## Prerequisites
-
-- Node.js 22 LTS
-- npm
-- Git
-- Docker Desktop (running)
-
-## 1. Project setup
+## Run with Docker (localhost:8018)
 
 ```bash
-git clone https://github.com/mmera21/mera_micaela_ui_garden.git
-cd mera_micaela_ui_garden
-npm install --legacy-peer-deps
+git clone https://github.com/mmera21/mera_micaela_ui_assigment13.git
+cd mera_micaela_ui_assigment13
+
+docker build -t mera_micaela_coding_assignment13 .
+docker run -d -p 8018:8018 --name mera_micaela_coding_assignment13 mera_micaela_coding_assignment13
 ```
 
-## 2. Run the app locally (development)
+Open **http://localhost:8018** (or http://127.0.0.1:8018).
+
+- **Container name:** `mera_micaela_coding_assignment13`
+- **Working directory:** `/mera_micaela_ui_garden_build_checks`
+- **Serves:** the production build (`npm run build`) on port 8018
+
+## Run locally
 
 ```bash
+npm install   # also installs the Husky hooks
 npm start
 ```
 
-Open http://localhost:8083 (127.0.0.1:8083).
+## Code quality checks
 
-## 3. Run Storybook
+| Script | What it does |
+| --- | --- |
+| `npm run format:check` | Prettier check |
+| `npm run lint` | ESLint check (fails on any warning) |
+| `npm run test:ci` | Runs all tests once |
 
-```bash
-npm run storybook
-```
+### Husky (pre-commit)
 
-Open http://localhost:6006. Each component has a **Default** and a **Disabled** story. Use the **Controls** panel to change text and background color, and to toggle `disabled`.
+`.husky/pre-commit` runs Prettier, ESLint and the tests before every commit. If any check fails, the commit is blocked.
 
-## 4. Run the tests
+### GitHub Actions
 
-```bash
-npm test -- --watchAll=false
-```
+`.github/workflows/ci.yml` runs the same checks plus the production build on every push and pull request. If the Husky hooks are skipped (`git commit --no-verify`), the workflow fails on GitHub and I get an email notification.
 
-Expected result: `Tests: 26 passed` (2 tests for each of the 13 components):
+## Steps I followed
 
-1. The component is visible.
-2. The background color changes when the component is `disabled`.
+1. Installed **Prettier** and `eslint-config-prettier`, and added `.prettierrc` and `.prettierignore`.
+2. Added `"prettier"` to the **ESLint** config so the two tools don't conflict.
+3. Added the `format`, `format:check`, `lint` and `test:ci` scripts to `package.json`.
+4. Installed **Husky** (`npx husky init`) and set the pre-commit hook to run the three checks.
+5. Created the **GitHub Actions** workflow in `.github/workflows/ci.yml`.
+6. Updated the **Dockerfile** to use port 8018, the new working directory, `npm ci` and `HUSKY=0`.
 
-## 5. Docker build and deployment
-
-Make sure Docker Desktop is running, then from the project root:
-
-```bash
-docker build -t mera_micaela_ui_garden .
-docker run -d -p 8083:8083 --name mera_micaela_coding_assignment12 mera_micaela_ui_garden
-```
-
-Open http://localhost:8083 (127.0.0.1:8083).
-
-Useful commands:
-
-```bash
-docker ps
-docker logs mera_micaela_coding_assignment12
-docker rm -f mera_micaela_coding_assignment12
-```
-
-If the container name is already in use, run `docker rm -f mera_micaela_coding_assignment12` and then the `docker run` command again.
-
-## 6. Verification of Assignment 12 requirements
-
-- [x] Created with Create React App (TypeScript) and Storybook
-- [x] All 13 required components exist
-- [x] Each component folder has `.tsx`, `.stories.tsx`, `.types.tsx`, `.tests.tsx` and `index.ts`
-- [x] Styling done with styled-components
-- [x] All components are responsive (`@media` queries)
-- [x] Storybook Controls modify text and background color
-- [x] Every component has a default and a disabled state
-- [x] Disabled components turn grey and show a `not-allowed` cursor
-- [x] Every component has at least 2 tests (visible, background color when disabled)
-- [x] Dockerfile hosts the production build in working dir `/mera_micaela_ui_garden`
-- [x] Container named `mera_micaela_coding_assignment12`
-- [x] App available at http://localhost:8083
-
-
-
-Prueba para Miss Maninder 
-
-cd C:\dev
-git clone https://github.com/mmera21/mera_micaela_ui_garden.git prueba_final
-cd prueba_final
-docker rm -f mera_micaela_coding_assignment12
-docker build -t mera_micaela_ui_garden .
-docker run -d -p 8083:8083 --name mera_micaela_coding_assignment12 mera_micaela_ui_garden
+Screenshots of Husky blocking commits, the GitHub Actions results and the app running in Docker are in the `photos/` folder.
